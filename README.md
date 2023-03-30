@@ -38,6 +38,11 @@
 > ### 📖 Rails Blog App : Creating a data model.
 > In this section of project, I have used migration files to build your schema.
 
+> ### 📖 Rails Blog App : Processing data in models.
+> In this section of project, I have set up models. To start with, we have tables for Users, Posts, Comments, and Likes, which means we need a model for each one. We've already set the foreign key in the table schema but be sure to write it here too!
+
+> ### 📖 Rails Blog App : Validations and model specs.
+> In this section of project, I have added validations to the models and create specs for them.
 
 ## 🛠 Built With <a name="built-with"></a>
 
