@@ -17,7 +17,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_03_29_175827) do
   create_table "comments", force: :cascade do |t|
     t.bigint "users_id", null: false
     t.bigint "posts_id", null: false
-    t.text "Text"
+    t.text "text"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["posts_id"], name: "index_comments_on_posts_id"
@@ -34,10 +34,10 @@ ActiveRecord::Schema[7.0].define(version: 2023_03_29_175827) do
   end
 
   create_table "posts", force: :cascade do |t|
-    t.string "Title"
-    t.text "Text"
-    t.integer "CommentsCounter"
-    t.integer "LikesCounter"
+    t.string "title"
+    t.text "text"
+    t.integer "comment_counter"
+    t.integer "like_counter"
     t.bigint "author_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
@@ -45,10 +45,10 @@ ActiveRecord::Schema[7.0].define(version: 2023_03_29_175827) do
   end
 
   create_table "users", force: :cascade do |t|
-    t.string "Name"
-    t.string "Photo"
-    t.text "Bio"
-    t.integer "PostCounter"
+    t.string "name"
+    t.string "photo"
+    t.text "bio"
+    t.integer "post_counter"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
