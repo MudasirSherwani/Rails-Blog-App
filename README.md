@@ -35,6 +35,10 @@
 
 >The Blog app is a classic example of a blog website. I have created a fully functional website that will show the list of posts and empower readers to interact with them by adding comments and liking posts.
 
+> ### 📖 Rails Blog App : Creating a data model.
+> In this section of project, I have used migration files to build your schema.
+
+
 ## 🛠 Built With <a name="built-with"></a>
 
 ### Tech Stack <a name="tech-stack"></a>
@@ -170,7 +174,7 @@ Example:
 
 ## 🔭 Future Features <a name="future-features"></a>
 
-- **Add more Classes**
+- **REST Full API**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -204,7 +208,7 @@ I would like to thanks [Microverse](https://www.microverse.org/) to guide me to 
 
 ## 📝 License <a name="license"></a>
  
-This project is [MIT](https://github.com/MudasirSherwani/Rails-Blog-App/blob/main/LICENSE.md) licensed.
+This project is [MIT](https://github.com/MudasirSherwani/Rails-Blog-App/blob/main/LICENSE) licensed.
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
