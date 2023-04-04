@@ -44,6 +44,9 @@
 > ### 📖 Rails Blog App : Validations and model specs.
 > In this section of project, I have added validations to the models and create specs for them.
 
+> ### 📖 Rails Blog App : Controllers
+> In this section of project, I have created all controllers and views for your Blog app. I didn't process any data yet, I have also add simple placeholders for views with plain HTML.
+
 ## 🛠 Built With <a name="built-with"></a>
 
 ### Tech Stack <a name="tech-stack"></a>
