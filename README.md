@@ -104,11 +104,6 @@ In order to run this project you need:
 - Object Oriented Programming(OOP) Knowledge
 - Vs Code 
 - Github / Git Bash
-
-### Prerequisites
-
-In order to run this project you need:
-
 - install ruby
 
 ```sh
