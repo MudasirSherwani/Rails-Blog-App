@@ -47,6 +47,9 @@
 > ### 📖 Rails Blog App : Controllers
 > In this section of project, I have created all controllers and views for your Blog app. I didn't process any data yet, I have also add simple placeholders for views with plain HTML.
 
+> ### 📖 Rails Blog App : Controllers specs
+> In this section of project, I have set up tests on the controllers recently added to the Blog app.
+
 ## 🛠 Built With <a name="built-with"></a>
 
 ### Tech Stack <a name="tech-stack"></a>
