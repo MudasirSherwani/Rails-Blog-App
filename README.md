@@ -105,6 +105,28 @@ In order to run this project you need:
 - Vs Code 
 - Github / Git Bash
 
+### Prerequisites
+
+In order to run this project you need:
+
+- install ruby
+
+```sh
+ sudo apt-get install ruby-full
+
+```
+- install rails
+  
+  ```sh
+    gem install rails
+
+  ```
+- install postgresql
+  
+  ```sh
+    sudo apt-get install postgresql postgresql-contrib libpq-dev
+  ```
+
 ### Setup
 
 Clone this repository to your desired folder:
@@ -114,54 +136,30 @@ Clone this repository to your desired folder:
   cd Rails-Blog-App
 ```
 
-<!-- ### Install
-
-Install this project with: -->
-
-<!--
-Example command:
+Prepare the database:
+  - create database
 
 ```sh
-  cd my-project
-  gem install
+  rails db:create
+  rails db:migrate
 ```
---->
 
-<!-- ### Usage
+### Usage
 
-To run the project, execute the following command: -->
-
-<!--
-Example command:
+To run the project, execute the following command:
 
 ```sh
   rails server
 ```
---->
 
-<!-- ### Run tests
 
-To run tests, run the following command: -->
+### Run tests
 
-<!--
-Example command:
+To run tests, run the following command:
 
 ```sh
-  bin/rails test test/models/article_test.rb
+  Rspec
 ```
---->
-
-<!-- ### Deployment
-
-You can deploy this project using: -->
-
-<!--
-Example:
-
-```sh
-
-```
- -->
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
