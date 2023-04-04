@@ -44,6 +44,9 @@
 > ### 📖 Rails Blog App : Validations and model specs.
 > In this section of project, I have added validations to the models and create specs for them.
 
+> ### 📖 Rails Blog App : Controllers
+> In this section of project, I have created all controllers and views for your Blog app. I didn't process any data yet, I have also add simple placeholders for views with plain HTML.
+
 ## 🛠 Built With <a name="built-with"></a>
 
 ### Tech Stack <a name="tech-stack"></a>
@@ -101,6 +104,23 @@ In order to run this project you need:
 - Object Oriented Programming(OOP) Knowledge
 - Vs Code 
 - Github / Git Bash
+- install ruby
+
+```sh
+ sudo apt-get install ruby-full
+
+```
+- install rails
+  
+  ```sh
+    gem install rails
+
+  ```
+- install postgresql
+  
+  ```sh
+    sudo apt-get install postgresql postgresql-contrib libpq-dev
+  ```
 
 ### Setup
 
@@ -111,54 +131,30 @@ Clone this repository to your desired folder:
   cd Rails-Blog-App
 ```
 
-<!-- ### Install
-
-Install this project with: -->
-
-<!--
-Example command:
+Prepare the database:
+  - create database
 
 ```sh
-  cd my-project
-  gem install
+  rails db:create
+  rails db:migrate
 ```
---->
 
-<!-- ### Usage
+### Usage
 
-To run the project, execute the following command: -->
-
-<!--
-Example command:
+To run the project, execute the following command:
 
 ```sh
   rails server
 ```
---->
 
-<!-- ### Run tests
 
-To run tests, run the following command: -->
+### Run tests
 
-<!--
-Example command:
+To run tests, run the following command:
 
 ```sh
-  bin/rails test test/models/article_test.rb
+  Rspec
 ```
---->
-
-<!-- ### Deployment
-
-You can deploy this project using: -->
-
-<!--
-Example:
-
-```sh
-
-```
- -->
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
