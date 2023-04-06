@@ -50,6 +50,9 @@
 > ### 📖 Rails Blog App : Controllers specs
 > In this section of project, I have set up tests on the controllers recently added to the Blog app.
 
+> ### 📖 Rails Blog App : Views
+> In this section of project, I have added the Views associated with the Models and Controllers which I have already created for this Blog App.
+
 ## 🛠 Built With <a name="built-with"></a>
 
 ### Tech Stack <a name="tech-stack"></a>
