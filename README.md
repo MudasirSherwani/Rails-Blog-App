@@ -122,6 +122,12 @@ In order to run this project you need:
     gem install rails
 
   ```
+- Install gems of rails
+
+  ```sh
+    bundle install
+  ```
+
 - install postgresql
   
   ```sh
