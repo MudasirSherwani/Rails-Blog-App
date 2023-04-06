@@ -2,6 +2,6 @@
   <h2>Post #<%= post.id %></h2>
   <p><%= truncate(post.text, length: 110, omission: " . . .") %></p>
   <div class="like-and-comment">
-    <p>Comments: <%= post.comment_counter %>, Likes: <%= post.like_counter %></p> 
+    <p>Comments: <%= post.comment_counter || 0 %>, Likes: <%= post.like_counter || 0 %></p>
   </div>
 </div>

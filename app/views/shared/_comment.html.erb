@@ -1,9 +1,9 @@
 <% if (post.comments.empty?) %>
   <p>No comment yet.</p>
 <% else %>
-  <% post.comments.each do |comment| %>
+  <% post.most_recent_comments.each do |comment| %>
     <ul>
-      <li><%= comment.users.name %>: <%= comment.text %></li>
+      <li><%= comment.author.name %>: <%= comment.text %></li>
     </ul>
   <% end %>
 <% end %>
