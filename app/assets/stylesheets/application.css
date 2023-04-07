@@ -16,19 +16,20 @@ ul {
 
 section {
   display: flex;
-  flex-direction: column;
   gap: 30px;
   width: 60%;
+  flex-direction: column;
   margin: 30px auto;
 }
 
 .buton {
   align-self: center;
-  border: 1px solid rgb(0, 0, 0);
-  font-weight: 600;
   width: 120px;
   padding: 8px 10px;
   font-size: 0.9rem;
+  border: 1px solid rgb(0, 0, 0);
+  font-weight: 600;
+  cursor: pointer;
 }
 
 .post {
@@ -37,9 +38,9 @@ section {
 }
 
 .comments-area {
-  border: 1px solid black;
   padding: 10px;
   display: flex;
+  border: 1px solid black;
   flex-direction: column;
   gap: 5px;
   font-size: 0.95rem;
@@ -62,9 +63,9 @@ a:active {
 
 .post-item {
   padding: 15px;
-  display: flex;
   border: 1px solid black;
   flex-direction: column;
+  display: flex;
   gap: 20px;
 }
 
@@ -88,18 +89,18 @@ img {
 
 .user-details {
   width: 100%;
-  flex-direction: column;
   justify-content: center;
   gap: 10px;
   display: flex;
+  flex-direction: column;
   border: 1px solid black;
 }
 
 .bio-area {
   border: 1px solid black;
-  flex-direction: column;
   padding: 15px;
   display: flex;
+  flex-direction: column;
   gap: 20px;
 }
 
@@ -120,10 +121,10 @@ img {
 }
 
 .user-posts {
-  padding: 15px;
-  border: 1px solid black;
   flex-direction: column;
   display: flex;
+  padding: 15px;
+  border: 1px solid black;
   gap: 10px;
 }
 
@@ -142,4 +143,55 @@ img {
 
 .bio-area p:first-child {
   font-weight: 700;
+}
+
+.like-comment-btn {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+}
+
+.form-text {
+  height: 90px;
+}
+
+.comment-button {
+  width: 120px;
+  align-self: center;
+  border: 1px solid black;
+  font-weight: 500;
+  padding: 8px 10px;
+  font-size: 0.9rem;
+  cursor: pointer;
+}
+
+.form {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.f-items {
+  text-align: start;
+  width: 75%;
+  font-size: 1rem;
+}
+
+.form-attr {
+  width: 100%;
+  padding: 5px;
+}
+
+.form-section {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  padding: 20px;
+  top: 50%;
+  width: 30%;
+  text-align: center;
 }
