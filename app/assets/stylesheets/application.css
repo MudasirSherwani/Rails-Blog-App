@@ -1,15 +1,145 @@
-/*
- * This is a manifest file that'll be compiled into application.css, which will include all the files
- * listed below.
- *
- * Any CSS (and SCSS, if configured) file within this directory, lib/assets/stylesheets, or any plugin's
- * vendor/assets/stylesheets directory can be referenced here using a relative path.
- *
- * You're free to add application-wide styles to this file and they'll appear at the bottom of the
- * compiled file so the styles you add here take precedence over styles defined in any other CSS
- * files in this directory. Styles in this file should be added after the last require_* statement.
- * It is generally better to create a new file per style scope.
- *
- *= require_tree .
- *= require_self
- */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+}
+
+ul {
+  list-style: none;
+}
+
+section {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  width: 60%;
+  margin: 30px auto;
+}
+
+.buton {
+  align-self: center;
+  border: 1px solid rgb(0, 0, 0);
+  font-weight: 600;
+  width: 120px;
+  padding: 8px 10px;
+  font-size: 0.9rem;
+}
+
+.post {
+  display: flex;
+  flex-direction: column;
+}
+
+.comments-area {
+  border: 1px solid black;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  font-size: 0.95rem;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+a:active {
+  color: inherit;
+}
+
+.posts-section {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.post-item {
+  padding: 15px;
+  display: flex;
+  border: 1px solid black;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.post-likes-comments {
+  text-align: end;
+}
+
+.users-list {
+  display: flex;
+  gap: 30px;
+}
+
+img {
+  width: 120px;
+  height: 120px;
+}
+
+.avatar {
+  border: 1px solid black;
+}
+
+.user-details {
+  width: 100%;
+  flex-direction: column;
+  justify-content: center;
+  gap: 10px;
+  display: flex;
+  border: 1px solid black;
+}
+
+.bio-area {
+  border: 1px solid black;
+  flex-direction: column;
+  padding: 15px;
+  display: flex;
+  gap: 20px;
+}
+
+.posts {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.user-details h2 {
+  margin-left: 50px;
+  font-size: 1.8rem;
+}
+
+.user-details p {
+  text-align: end;
+  margin-right: 50px;
+}
+
+.user-posts {
+  padding: 15px;
+  border: 1px solid black;
+  flex-direction: column;
+  display: flex;
+  gap: 10px;
+}
+
+.like-and-comment {
+  text-align: end;
+}
+
+.like-and-comment p {
+  font-size: 0.9rem;
+}
+
+.user-posts h2 {
+  font-size: 1.4rem;
+  margin-bottom: 10px;
+}
+
+.bio-area p:first-child {
+  font-weight: 700;
+}
