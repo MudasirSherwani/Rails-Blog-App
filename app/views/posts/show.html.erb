@@ -3,6 +3,12 @@
     <h2>Post</h2>
     <p class="post-likes-comments">Comments: <%= @post.comment_counter %>, Likes: <%= @post.like_counter %></p>
     <p><%= @post.text %></p>
+            <div class="like-comment-btn">
+      <%= form_with model: @like, url: user_post_likes_path(user_id: @post.author.id, post_id: @post.id), local: true do |form| %>
+        <%= form.submit "Like this Post", class: "comment-button" %>
+      <% end %>
+      <button type="button" class="comment-button"><%= link_to "Add Comment", new_user_post_comment_path(user_id: @post.author.id, post_id: @post.id)  %></button>
+    </div>
   </div>
   <div class="comments-area">
     <%= render "shared/comment", post: @post %>
