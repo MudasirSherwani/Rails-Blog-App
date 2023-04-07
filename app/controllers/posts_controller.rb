@@ -13,7 +13,7 @@ class PostsController < ApplicationController
     if @post.save
       redirect_to user_posts_path(current_user)
     else
-      flash[:alert] = "Error Occur During Post Create !"
+      flash[:alert] = 'Error Occur During Post Create !'
       render :new, status: :unprocessable_entity
     end
   end
