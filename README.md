@@ -53,6 +53,10 @@
 > ### 📖 Rails Blog App : Views
 > In this section of project, I have added the Views associated with the Models and Controllers which I have already created for this Blog App.
 
+> ### 📖 Rails Blog App : Add Forms
+> In this section of project, I have added the forms for create new post and add comments in the rails Blog App.
+
+
 ## 🛠 Built With <a name="built-with"></a>
 
 ### Tech Stack <a name="tech-stack"></a>
