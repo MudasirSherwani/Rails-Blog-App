@@ -7,8 +7,6 @@ class PostsController < ApplicationController
 
   def create
     @post = Post.new(params.require(:post).permit(:title, :text))
-    @post.comment_counter = 0
-    @post.like_counter = 0
     @post.author = current_user
     if @post.save
       redirect_to user_posts_path(current_user)
