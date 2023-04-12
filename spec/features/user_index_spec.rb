@@ -3,7 +3,7 @@ require 'spec_helper'
 RSpec.describe 'Users Index', type: :request do
   subject { page }
   before(:each) do
-    User.create(name: 'Tom', post_counter: 5,  photo: 'image.jpg')
+    User.create(name: 'Tom', post_counter: 5, photo: 'image.jpg')
     User.create(name: 'Lilly', post_counter: 2, id: 12, photo: 'image.jpg')
   end
   it 'assigns all users to @users' do

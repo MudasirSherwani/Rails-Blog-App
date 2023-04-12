@@ -8,11 +8,16 @@ RSpec.describe 'Users Show', type: :request do
     User.create(id: 1, name: 'Tom', post_counter: 5,
                 photo: '',
                 bio: 'A Full Stack Developer')
-    Post.create(title: 'Post 1 by Tom', text: 'This post is written by tom', comment_counter: 0, like_counter: 0, author_id: 1)
-    Post.create(title: 'Post 2 by Tom', text: 'This post is written by tom', comment_counter: 0, like_counter: 0, author_id: 1)
-    Post.create(title: 'Post 3 by Tom', text: 'This post is written by tom', comment_counter: 0, like_counter: 0, author_id: 1)
-    Post.create(title: 'Post 4 by Tom', text: 'This post is written by tom', comment_counter: 0, like_counter: 0, author_id: 1)
-    Post.create(title: 'Post 5 by Tom', text: 'This post is written by tom', comment_counter: 0, like_counter: 0, author_id: 1)
+    Post.create(title: 'Post 1 by Tom', text: 'This post is written by tom', comment_counter: 0, like_counter: 0,
+                author_id: 1)
+    Post.create(title: 'Post 2 by Tom', text: 'This post is written by tom', comment_counter: 0, like_counter: 0,
+                author_id: 1)
+    Post.create(title: 'Post 3 by Tom', text: 'This post is written by tom', comment_counter: 0, like_counter: 0,
+                author_id: 1)
+    Post.create(title: 'Post 4 by Tom', text: 'This post is written by tom', comment_counter: 0, like_counter: 0,
+                author_id: 1)
+    Post.create(title: 'Post 5 by Tom', text: 'This post is written by tom', comment_counter: 0, like_counter: 0,
+                author_id: 1)
   end
   it 'renders the name of the user' do
     get user_path(1)
