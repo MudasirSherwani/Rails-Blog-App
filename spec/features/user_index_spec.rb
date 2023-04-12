@@ -1,5 +1,6 @@
-require 'rails_helper'
 require 'spec_helper'
+require 'rails_helper'
+
 RSpec.describe 'Users Index', type: :request do
   subject { page }
   before(:each) do
