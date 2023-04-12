@@ -4,19 +4,19 @@ require 'spec_helper'
 RSpec.describe 'Users Show', type: :feature do
   before(:example) do
     @user = User.create(id: 1, name: 'Tom', post_counter: 5,
-                photo: '',
-                bio: 'A Full Stack Developer')
+                        photo: '',
+                        bio: 'A Full Stack Developer')
     Post.create(title: 'Post 1 by Tom', text: 'This post is written by tom', comment_counter: 0, like_counter: 0,
-      author: @user)
+                author: @user)
     Post.create(title: 'Post 2 by Tom', text: 'This post is written by tom', comment_counter: 0, like_counter: 0,
-      author: @user)
+                author: @user)
     Post.create(title: 'Post 3 by Tom', text: 'This post is written by tom', comment_counter: 0, like_counter: 0,
-      author: @user)
+                author: @user)
     Post.create(title: 'Post 4 by Tom', text: 'This post is written by tom', comment_counter: 0, like_counter: 0,
-      author: @user)
+                author: @user)
     Post.create(title: 'Post 5 by Tom', text: 'This post is written by tom', comment_counter: 0, like_counter: 0,
-      author: @user)
-      visit user_path(@user.id)
+                author: @user)
+    visit user_path(@user.id)
   end
 
   it "redirect to that user's show page after click" do
