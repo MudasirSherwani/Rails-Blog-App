@@ -1,13 +1,13 @@
 require 'rails_helper'
 RSpec.describe Comment, type: :model do
-  let(:user) { User.create(name: 'Mudasir', photo: 'https://unsplash.com/photos/F_-0BxGuVvo', bio: 'Full-stack developer') }
-  let(:post) { Post.create(title: 'My Post', author: user) }
-  subject { Comment.new(text: 'comment is Lorem ipsum', users_id: user.id, posts_id: post.id) }
+  let(:user) { User.create(id: 1, name: 'Mudasir', photo: 'https://unsplash.com/photos/F_-0BxGuVvo', bio: 'Full-stack developer') }
+  let(:post) { Post.create(id: 1, title: 'My Post', author_id: user.id) }
+  subject { Comment.new(text: 'comment is Lorem ipsum', author_id: user.id, posts_id: post.id) }
 
   before { subject.save }
 
   it 'should belong to a user' do
-    expect(subject.users_id).to eq(user.id)
+    expect(subject.author_id).to eq(user.id)
   end
 
   it 'should belong to a post' do
