@@ -16,7 +16,7 @@ RSpec.describe 'Users Show', type: :feature do
       author: @user)
     Post.create(title: 'Post 5 by Tom', text: 'This post is written by tom', comment_counter: 0, like_counter: 0,
       author: @user)
-      visit users_path(@user.id)
+      visit user_path(@user.id)
   end
 
   it "redirect to that user's show page after click" do
