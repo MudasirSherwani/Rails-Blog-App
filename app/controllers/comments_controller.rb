@@ -1,12 +1,14 @@
 class CommentsController < ApplicationController
+  load_and_authorize_resource
   def new
+    @post = Post.find(params[:post_id])
     @comment = Comment.new
   end
 
   def create
     @comment = Comment.new(comment_params)
     @comment.author = current_user
-    if @user.id != current_user.id
+    if  set_user.id != current_user.id
       flash[:alert] = 'You do not have permission to add comment'
       redirect_to root_path and return
     end
@@ -21,10 +23,11 @@ class CommentsController < ApplicationController
 
   def destroy
     @comment = Comment.find(params[:id])
-    @post = @comment.post
+    @post = @comment.posts
+    @user = @post.author
     @comment.destroy
     respond_to do |format|
-      format.html { redirect_to user_post_path(@post), notice: 'Comment deleted successfully.' }
+      format.html { redirect_to user_post_path(@user, @post), notice: 'Comment deleted successfully .' }
       format.json { head :no_content }
     end
   end
@@ -32,5 +35,9 @@ class CommentsController < ApplicationController
 
   def comment_params
     params.require(:comment).permit(:text)
+  end
+
+  def set_user
+    @user = User.find(params[:user_id])
   end
 end
