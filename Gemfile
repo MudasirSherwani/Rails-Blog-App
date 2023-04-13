@@ -51,7 +51,6 @@ gem 'bootsnap', require: false
 gem 'devise'
 gem 'letter_opener'
 
-
 group :development, :test do
   gem 'rspec-rails'
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
