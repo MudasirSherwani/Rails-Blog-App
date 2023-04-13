@@ -6,6 +6,10 @@ class PostsController < ApplicationController
   end
 
   def create
+    if @user.id != current_user.id
+      flash[:alert] = 'You do not have permission to add post'
+      redirect_to root_path and return
+    end
     @post = Post.new(params.require(:post).permit(:title, :text))
     @post.author = current_user
     if @post.save
@@ -18,6 +22,17 @@ class PostsController < ApplicationController
 
   def new
     @post = Post.new
+  end
+
+  def destroy
+    @post.likes.destroy_all
+    @post.comments.destroy_all
+    @post.destroy
+    @user.update(posts_counter: @user.posts_counter - 1)
+    respond_to do |format|
+      format.html { redirect_to root_path, notice: 'Post Deleted successfully.' }
+      format.json { head :no_content }
+    end
   end
 
   def show
