@@ -30,6 +30,7 @@ section {
   border: 1px solid rgb(0, 0, 0);
   font-weight: 600;
   cursor: pointer;
+  margin-top: 10px;
 }
 
 .post {
@@ -176,6 +177,7 @@ img {
   text-align: start;
   width: 75%;
   font-size: 1rem;
+  flex-direction: column;
 }
 
 .form-attr {
@@ -187,11 +189,12 @@ img {
   position: absolute;
   left: 50%;
   transform: translate(-50%, -50%);
-  display: flex;
   flex-direction: column;
+  align-items: center;
   gap: 30px;
   padding: 20px;
   top: 50%;
   width: 30%;
   text-align: center;
+  border: 1px solid black;
 }
