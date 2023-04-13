@@ -50,6 +50,7 @@ gem 'bootsnap', require: false
 
 gem 'devise'
 gem 'letter_opener'
+gem 'cancancan'
 
 group :development, :test do
   gem 'rspec-rails'
