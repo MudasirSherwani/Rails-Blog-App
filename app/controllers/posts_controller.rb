@@ -1,12 +1,26 @@
 class PostsController < ApplicationController
   def index
-    user_id = params[:user_id]
-    @user = User.includes([:posts]).find(user_id)
+    @user = User.find(params[:user_id])
     @posts = @user.posts.includes([:comments]).order(created_at: :desc)
   end
 
+  def show
+    @post = Post.find(params[:id])
+    @user = @post.author
+    redirect_to user_post_path(@user, @post) if params[:post_number]
+    @post_number = @user.posts.find_index(@post) + 1
+    @like = @post.likes.find_by(author: current_user)
+  rescue ActiveRecord::RecordNotFound
+    render file: "#{Rails.root}/public/404.html", status: :not_found
+  end
+
+  before_action :set_user
+
+
+
   def create
-    if @user.id != current_user.id
+
+    if set_user.id != current_user.id
       flash[:alert] = 'You do not have permission to add post'
       redirect_to root_path and return
     end
@@ -25,22 +39,29 @@ class PostsController < ApplicationController
   end
 
   def destroy
+    @post = Post.find(params[:id])
     @post.likes.destroy_all
     @post.comments.destroy_all
     @post.destroy
-    @user.update(posts_counter: @user.posts_counter - 1)
+    @user.update(post_counter: @user.post_counter - 1) 
     respond_to do |format|
       format.html { redirect_to root_path, notice: 'Post Deleted successfully.' }
       format.json { head :no_content }
     end
   end
 
-  def show
-    user_id = params[:user_id]
-    post_id = params[:id]
-    @user = User.find(user_id)
-    @post = @user.posts.find(post_id)
-    @comments = @post.comments.order(created_at: :desc)
-    @likes = @post.likes.all
+  def likes
+    @post = Post.find(params[:id])
+    if @post.likes.create(author_id: current_user.id)
+      flash[:success] = 'Post Liked'
+    else
+      flash[:error] = 'Failed to like the post.'
+    end
+    redirect_to user_posts_path
   end
+
+  def set_user
+    @user = User.find(params[:user_id])
+  end
+
 end
