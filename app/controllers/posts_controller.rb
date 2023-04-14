@@ -18,21 +18,16 @@ class PostsController < ApplicationController
 
 
 
-  def create
-
-    if set_user.id != current_user.id
-      flash[:alert] = 'You do not have permission to add post'
-      redirect_to root_path and return
-    end
-    @post = Post.new(params.require(:post).permit(:title, :text))
-    @post.author = current_user
-    if @post.save
-      redirect_to user_posts_path(current_user)
+ 
+def create
+    like = Like.new(author_id: params[:user_id], posts_id: params[:post_id])
+    if like.save
+      redirect_to user_post_path(params[:user_id], params[:post_id]), notice: 'Post was successfully liked.'
     else
-      flash[:alert] = 'Error Occur During Post Create !'
-      render :new, status: :unprocessable_entity
+      flash.now[:error] = 'Error Occurred During Like Creation!'
     end
   end
+ 
 
   def new
     @post = Post.new
