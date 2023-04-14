@@ -3,7 +3,12 @@
 <% else %>
   <% post.most_recent_comments.each do |comment| %>
     <ul>
-      <li><%= comment.author.name %>: <%= comment.text %></li>
-    </ul>
+      <li><%= comment.author.name %>: <%= comment.text %></li> 
+       <% if can? :destroy, comment %>
+      <%= form_for([comment.posts.author, comment.posts, comment], method: :delete) do |f| %>
+        <%= f.submit 'Delete Comment' %>
+      <% end %>
+      <% end %>
+      </ul>
   <% end %>
 <% end %>

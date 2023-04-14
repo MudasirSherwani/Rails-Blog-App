@@ -6,8 +6,9 @@
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
 
-   first_user = User.create!(email: 'tom@gmail.com', password:'123456', name: 'Tom', photo: 'https://unsplash.com/photos/F_-0BxGuVvo', bio: 'Teacher from Mexico.', post_counter: 2)
-   second_user = User.create!(email: 'lillty@gmail.com',  password:'123456', name: 'Lilly', photo: 'https://unsplash.com/photos/F_-0BxGuVvo', bio: 'Teacher from Poland.', post_counter: 2)
+   first_user = User.create!(role: 'admin', email: 'tom@gmail.com', password:'123456', name: 'Tom', photo: 'https://unsplash.com/photos/F_-0BxGuVvo', bio: 'Teacher from Mexico.', post_counter: 0)
+   second_user = User.create!(role: 'useruser', email: 'lillty@gmail.com',  password:'123456', name: 'Lilly', photo: 'https://unsplash.com/photos/F_-0BxGuVvo', bio: 'Teacher from Poland.', post_counter: 0)
+   third_user = User.create!(role: 'useruser', email: 'mudasir@gmail.com',  password:'123456', name: 'mudasir', photo: 'https://unsplash.com/photos/F_-0BxGuVvo', bio: 'Developer from pakistan.', post_counter: 0)
    
    first_post = Post.create!(author: first_user, title: 'Post Written by Tom', text: 'This is Tom first post This is Tom first postThis is Tom first postThis is Tom first postThis is Tom first postThis is Tom first postThis is Tom first post' )
    second_post = Post.create!(author: first_user, title: 'Post Written by Tom', text: 'This is Tom second post This is Tom second postThis is Tom second postThis is Tom second postThis is Tom second postThis is Tom second postThis is Tom second postThis is Tom second post')
