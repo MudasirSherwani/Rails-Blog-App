@@ -185,9 +185,9 @@ To run tests, run the following command:
 - LinkedIn: [@Mudasir Sherwani](https://linkedin.com/in/mudasir-sherwani)
 
 👤 **Pierre Celestin Moussa**
-- GitHub:[@Piercel2022 Pierre] (https://github.com/Piercel2022)
-- Twitter:[@pier_celestin Pierre] (https://twitter.com/pier_celestin)
-- LinkedIn: [@pierrecelestinma Pierre](https://linkedin.com/in/pierrecelestinmax)
+- GitHub:[@Piercel2022 Pierre](https://github.com/Piercel2022)
+- Twitter:[@pier_celestin Pierre](https://twitter.com/pier_celestin)
+- LinkedIn: [@pierrecelestinmax Pierre](https://linkedin.com/in/pierrecelestinmax)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
