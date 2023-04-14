@@ -1,5 +1,5 @@
 <div class="user-posts">
-  <h2>Post #<%= post.id %></h2>
+  <%= link_to "Post ##{post.id}", user_post_path(user_id: post.author.id, id: post.id) , class: "post-heading" %>
   <p><%= truncate(post.text, length: 110, omission: " . . .") %></p>
   <div class="like-and-comment">
     <p>Comments: <%= post.comment_counter || 0 %>, Likes: <%= post.like_counter || 0 %></p>
