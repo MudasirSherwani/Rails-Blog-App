@@ -51,6 +51,7 @@ gem 'bootsnap', require: false
 gem 'devise'
 gem 'letter_opener'
 gem 'cancancan'
+gem 'active_model_serializers', '~> 0.10.2'
 
 group :development, :test do
   gem 'rspec-rails'
