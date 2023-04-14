@@ -8,7 +8,7 @@ class CommentsController < ApplicationController
   def create
     @comment = Comment.new(comment_params)
     @comment.author = current_user
-    if  set_user.id != current_user.id
+    if set_user.id != current_user.id
       flash[:alert] = 'You do not have permission to add comment'
       redirect_to root_path and return
     end
@@ -31,6 +31,7 @@ class CommentsController < ApplicationController
       format.json { head :no_content }
     end
   end
+
   private
 
   def comment_params

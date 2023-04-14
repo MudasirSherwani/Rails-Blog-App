@@ -16,10 +16,7 @@ class PostsController < ApplicationController
 
   before_action :set_user
 
-
-
- 
-def create
+  def create
     like = Like.new(author_id: params[:user_id], posts_id: params[:post_id])
     if like.save
       redirect_to user_post_path(params[:user_id], params[:post_id]), notice: 'Post was successfully liked.'
@@ -27,7 +24,6 @@ def create
       flash.now[:error] = 'Error Occurred During Like Creation!'
     end
   end
- 
 
   def new
     @post = Post.new
@@ -38,7 +34,7 @@ def create
     @post.likes.destroy_all
     @post.comments.destroy_all
     @post.destroy
-    @user.update(post_counter: @user.post_counter - 1) 
+    @user.update(post_counter: @user.post_counter - 1)
     respond_to do |format|
       format.html { redirect_to root_path, notice: 'Post Deleted successfully.' }
       format.json { head :no_content }
@@ -58,5 +54,4 @@ def create
   def set_user
     @user = User.find(params[:user_id])
   end
-
 end
