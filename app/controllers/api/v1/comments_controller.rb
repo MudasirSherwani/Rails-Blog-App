@@ -1,5 +1,5 @@
 class Api::V1::CommentsController < ApplicationController
-    skip_before_action :authenticate_user!
+  skip_before_action :authenticate_user!
   def index
     pst = Post.find(params[:post_id])
     comm = pst.comments
