@@ -37,7 +37,6 @@ class PostsController < ApplicationController
     end
   end
 
-
   def destroy
     @post = Post.find(params[:id])
     @post.likes.destroy_all
@@ -60,7 +59,7 @@ class PostsController < ApplicationController
     redirect_to user_posts_path
   end
 
-def post_params
+  def post_params
     params.require(:post).permit(:title, :text)
   end
 
