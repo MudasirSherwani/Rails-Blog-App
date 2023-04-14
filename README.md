@@ -182,8 +182,12 @@ To run tests, run the following command:
 
 - GitHub: [@Mudasir Sherwani](https://github.com/MudasirSherwani)
 - Twitter: [@Mudasir Sherwani](https://twitter.com/mudasirsherwani)
-- LinkedIn: [Mudasir Sherwani](https://linkedin.com/in/mudasir-sherwani)
+- LinkedIn: [@Mudasir Sherwani](https://linkedin.com/in/mudasir-sherwani)
 
+👤 **Pierre Celestin Moussa**
+- GitHub:[@Piercel2022 Pierre] (https://github.com/Piercel2022)
+- Twitter:[@pier_celestin Pierre] (https://twitter.com/pier_celestin)
+- LinkedIn: [@pierrecelestinma Pierre](https://linkedin.com/in/pierrecelestinmax)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
