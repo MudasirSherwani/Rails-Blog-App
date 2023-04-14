@@ -1,4 +1,5 @@
 class PostsController < ApplicationController
+  load_and_authorize_resource
   def index
     @user = User.find(params[:user_id])
     @posts = @user.posts.includes([:comments]).order(created_at: :desc)
@@ -16,18 +17,26 @@ class PostsController < ApplicationController
 
   before_action :set_user
 
-  def create
-    like = Like.new(author_id: params[:user_id], posts_id: params[:post_id])
-    if like.save
-      redirect_to user_post_path(params[:user_id], params[:post_id]), notice: 'Post was successfully liked.'
-    else
-      flash.now[:error] = 'Error Occurred During Like Creation!'
-    end
-  end
-
   def new
     @post = Post.new
   end
+
+  def create
+    @user = User.find(params[:user_id])
+
+    @post = @user.posts.build(post_params)
+    @post.author_id = @user.id
+
+    if @post.save
+      puts 'Post saved successfully'
+      redirect_to root_path, notice: 'Post created successfully.'
+    else
+      puts 'Faild to create post'
+      p @post.errors
+      render :new
+    end
+  end
+
 
   def destroy
     @post = Post.find(params[:id])
@@ -49,6 +58,10 @@ class PostsController < ApplicationController
       flash[:error] = 'Failed to like the post.'
     end
     redirect_to user_posts_path
+  end
+
+def post_params
+    params.require(:post).permit(:title, :text)
   end
 
   def set_user

@@ -1,10 +1,10 @@
 <%= form_with model: post, url: user_posts_path, local: true, class: "form" do |form| %>
     <div class="f-items">
-      <%= form.label :title %></br>
+      <%= form.label :title %><br />
       <%= form.text_field :title, class: "form-attr form-title" %>
     </div>
     <div class="f-items">
-      <%= form.label :text %></br>
+      <%= form.label :text %><br />
       <%= form.text_area :text, class: "form-attr form-text" %>
     </div>
     <div>

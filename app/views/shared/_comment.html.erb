@@ -4,7 +4,7 @@
   <% post.most_recent_comments.each do |comment| %>
     <ul>
       <li><%= comment.author.name %>: <%= comment.text %></li> 
-      <% if  comment.posts.author == current_user %>
+      <% if  comment.author == current_user %>
       <%= form_for([comment.posts.author, comment.posts, comment], method: :delete) do |f| %>
         <%= f.submit 'Delete Comment' %>
       <% end %>
