@@ -16,7 +16,7 @@
   <div class="comments-area">
     <%= render "shared/comment", post: @post %>
   </div>
-  <% if @post.author == current_user %>
+  <% if can? :destroy, @post %>
   <%= form_with url: user_post_path(@post.author.id, @post), method: :delete do |form| %>
     <%= form.submit "Delete Post" , class: "btn"%>
   <% end %>
