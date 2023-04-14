@@ -56,6 +56,18 @@
 > ### 📖 Rails Blog App : Add Forms
 > In this section of project, I have added the forms for create new post and add comments in the rails Blog App.
 
+> ### 📖 Rails Blog App : Integration specs for Views and fixing n+1 problems.
+> In this section of project, I have create integration tests for all of the views used in the project. Be sure to cover the user stories (or user workflows) that you want users to experience while taking into consideration the possible errors your users may cause.
+
+> ### 📖 Rails Blog App : Add Devise.
+> In this section of project, In this project, I have added the devise gem to the app and use it for the registration and login of users.
+
+> ### 📖 Rails Blog App : Add authorization rules.
+> In this section of project, We have added authorization to the app using CanCanCan.
+
+> ### 📖 Rails Blog App : Add API endpoints.
+> In this section of project, We have added some API endpoints to the Blog app. This will allow this app to be used in different ways, rather than just through your site - for example, a mobile app or a CLI application.
+
 
 ## 🛠 Built With <a name="built-with"></a>
 
@@ -184,7 +196,9 @@ To run tests, run the following command:
 - Twitter: [@Mudasir Sherwani](https://twitter.com/mudasirsherwani)
 - LinkedIn: [@Mudasir Sherwani](https://linkedin.com/in/mudasir-sherwani)
 
+
 👤 **Pierre Celestin Moussa**
+
 - GitHub:[@Piercel2022 Pierre](https://github.com/Piercel2022)
 - Twitter:[@pier_celestin Pierre](https://twitter.com/pier_celestin)
 - LinkedIn: [@pierrecelestinmax Pierre](https://linkedin.com/in/pierrecelestinmax)
