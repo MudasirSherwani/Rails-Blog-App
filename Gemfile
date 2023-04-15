@@ -52,11 +52,12 @@ gem 'active_model_serializers', '~> 0.10.2'
 gem 'cancancan'
 gem 'devise'
 gem 'letter_opener'
-gem 'rswag'
-
+gem 'rswag-api'
+gem 'rswag-ui'
 
 group :development, :test do
-  gem 'rspec-rails'
+ gem 'rspec-rails'
+  gem 'rswag-specs'
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
   gem 'debug', platforms: %i[mri mingw x64_mingw]
 end
