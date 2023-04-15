@@ -52,6 +52,8 @@ gem 'active_model_serializers', '~> 0.10.2'
 gem 'cancancan'
 gem 'devise'
 gem 'letter_opener'
+gem 'rswag'
+
 
 group :development, :test do
   gem 'rspec-rails'
